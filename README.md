@@ -1,9 +1,9 @@
 # go-worker-pool
 Thank you for all the good libraries and Articles:
-[Tunny](https://github.com/Jeffail/tunny)&nbsp;
-[Wpool](https://github.com/gotohr/wpool)&nbsp;
-[Handling 1 millon requests per minute with golang](http://marcio.io/2015/07/handling-1-million-requests-per-minute-with-golang/)&nbsp;
-[Visually understanding worker pool](https://medium.com/coinmonks/visually-understanding-worker-pool-48a83b7fc1f5)&nbsp;
+1. [Tunny](https://github.com/Jeffail/tunny)
+2. [Wpool](https://github.com/gotohr/wpool)
+3. [Handling 1 millon requests per minute with golang](http://marcio.io/2015/07/handling-1-million-requests-per-minute-with-golang/)
+4. [Visually understanding worker pool](https://medium.com/coinmonks/visually-understanding-worker-pool-48a83b7fc1f5)
 
 ## How to use this?
 #### Install package
