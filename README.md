@@ -1,4 +1,6 @@
 # go-worker-pool
+[![Build Status](https://travis-ci.org/jayhuang75/go-worker-pool.svg?branch=master)](https://travis-ci.org/jayhuang75/go-worker-pool) [![codecov](https://codecov.io/gh/jayhuang75/go-worker-pool/branch/master/graph/badge.svg)](https://codecov.io/gh/jayhuang75/go-worker-pool)
+[![Go Report Card](https://goreportcard.com/badge/github.com/jayhuang75/go-worker-pool)](https://goreportcard.com/report/github.com/jayhuang75/go-worker-pool)
 Thank you for all the good libraries and Articles:
 1. [Tunny](https://github.com/Jeffail/tunny)
 2. [Wpool](https://github.com/gotohr/wpool)
