@@ -63,7 +63,7 @@ func main() {
 		resources[i] = s
 	}
 
-	pool := worker.NewPool(numCPUs)
+	pool := worker.NewWorkerPool(numCPUs)
 	pool.Start(resources, Processor, Result)
 
 }
