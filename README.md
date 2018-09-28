@@ -29,15 +29,17 @@ type Person struct {
 	Age  int
 }
 
-// ResourceProcessor func
-func ResourceProcessor(resource interface{}) error {
+// Processor func
+// This is the custom process function
+func Processor(resource interface{}) error {
 	// fmt.Printf("worker: started, working for %s\n", resource)
 	fmt.Printf(">>>>>>>>>>>>>> %s \n", resource.(Person).Name+" ok")
 	return nil
 }
 
-// ResultProcessor func
-func ResultProcessor(result worker.Result) error {
+// ResultProcessor func 
+// We can catch all the failed and retry in here
+func Result(result worker.Result) error {
 	fmt.Printf("Result processor got error: %s\n", result.Err)
 	fmt.Printf("Result processor got result: %d\n", result.Job)
 	return nil
@@ -62,7 +64,7 @@ func main() {
 	}
 
 	pool := worker.NewPool(numCPUs)
-	pool.Start(resources, ResourceProcessor, ResultProcessor)
+	pool.Start(resources, Processor, Result)
 
 }
 ```
