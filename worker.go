@@ -102,8 +102,8 @@ func (p *Pool) workerPool(processor ProcessorFunc) {
 func (p *Pool) collectResult(proc ResultProcessorFunc) {
 	fmt.Printf("[Worker Pool] GoRoutine collect starting\n")
 	for result := range p.results {
-		outcome := proc(result)
-		fmt.Printf("[Worker Pool] Job with id: [%d] completed, outcome: %s\n", result.Job.id, outcome)
+		proc(result)
+		//fmt.Printf("[Worker Pool] Job with id: [%d] completed, outcome: %s\n", result.Job.id, outcome)
 	}
 	fmt.Printf("[Worker Pool] GoRoutine collect done, setting channel done as completed\n")
 	p.done <- true
