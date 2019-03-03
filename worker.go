@@ -38,7 +38,7 @@ type Pool struct {
 
 // NewWorkerPool NewManager returns a new manager structure ready to be used.
 func NewWorkerPool(numRoutines int) *Pool {
-	fmt.Printf("[Worker Pool] Creating a new Pool")
+	fmt.Printf("[Worker Pool] Creating a new Pool\n")
 	r := &Pool{numRoutines: numRoutines}
 	r.jobs = make(chan Job, numRoutines)
 	r.results = make(chan Result, numRoutines)
