@@ -64,6 +64,7 @@ func main() {
 	}
 
 	pool := worker.NewWorkerPool(numCPUs)
+	pool.Log(false) // remove heavry logging
 	pool.Start(resources, Processor, Result)
 
 }
