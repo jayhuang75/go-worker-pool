@@ -9,13 +9,10 @@ import (
 
 func TestNewWorkerPool(t *testing.T) {
 	pool := NewWorkerPool(10)
-	assert.False(t, pool.IsCompleted())
-}
-
-func TestLog(t *testing.T) {
-	pool := NewWorkerPool(10)
 	pool.Log(false)
-	pool.logging = false
+	assert.False(t, pool.IsCompleted())
+	assert.False(t, pool.logging, false)
+
 }
 
 func ResourceProcessor(resource interface{}) error {
